@@ -1,0 +1,24 @@
+** start of script.js **
+
+console.log("Hello! I'm your coding fun fact guide!");
+let botName = "Java Man";
+let botLocation = "the internet";
+let favoriteLanguage = "javascript";
+
+let nameSentance = "My name is " + botName + " and I live on " + botLocation + ".";
+console.log(nameSentance);
+let languageSentance = "My favorite programming language is " + favoriteLanguage + ".";
+console.log(languageSentance);
+let codingFact = "I can code " + favoriteLanguage + " with my eyes shut!";
+console.log(codingFact);
+
+codingFact = "I can code " + favoriteLanguage + "w with no hands.";
+console.log(codingFact);
+codingFact = "I can code " + favoriteLanguage + "w with no instructions.";
+console.log(codingFact);
+let goodbye = "It was fun sharing these facts with you. Goodbye! - " + botName + " from " + botLocation + ".";
+console.log(goodbye);
+
+
+** end of script.js **
+
