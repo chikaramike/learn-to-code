@@ -1,21 +1,53 @@
 let lunches = [];
-function addLunchToEnd(lunches,addEnd){
-  lunches = lunches.shift(addEnd);
-  console.log(`$addEnd added to the end of the lunch menu.`);
-  return lunches;
+
+function addLunchToEnd(lunchArray,lunchItem) {
+  lunchArray.push(lunchItem);
+  console.log(`${lunchItem} added to the end of the lunch menu.`);
+  return lunchArray;
 }
-function addLunchToStart(lunches,addStart){
-  lunches = lunches.unshift(addStart);
-  console.log(`$addStart added to the start of the lunch menu.`);
-  return lunches;
+
+function addLunchToStart(lunchArray,lunchItem) {
+  lunchArray.unshift(lunchItem);
+  console.log(`${lunchItem} added to the start of the lunch menu.`);
+  return lunchArray;
 }
-// function removeFirstLunch(lunches){
-//  if lunches.lengh == 0 {
-//   consolde.log("No lunches to remove.")
-//   return lunches;
-//   else{
-//    removeFirst = lunches.pop(); 
-//     console.log(`$removeFirst removed from the start of the lunch menu.`);
-//  return lunches
-//   }
-//  }
+
+function removeLastLunch(lunchArray) {
+  if (lunchArray.length === 0) {
+    console.log("No lunches to remove.");
+    } else {
+    const removedItem = lunchArray.pop(); 
+    console.log(`${removedItem} removed from the end of the lunch menu.`);
+  }
+  return lunchArray; 
+}
+function removeFirstLunch(lunchArray) {
+  if (lunchArray.length === 0) {
+    console.log("No lunches to remove.");
+  } else {
+    const removedItem = lunchArray.shift(); // Remove the first element and store it
+    console.log(`${removedItem} removed from the start of the lunch menu.`);
+  }
+  return lunchArray; // Return the updated (or original, if empty) array
+}
+
+function getRandomLunch(lunchArray) {
+  if (lunchArray.length === 0) {
+    console.log("No lunches available.");
+  } else {
+    // Generate a random index within the array's bounds
+    const randomIndex = Math.floor(Math.random() * lunchArray.length);
+    // Get the lunch item at the random index
+    const randomLunchItem = lunchArray[randomIndex];
+    console.log(`Randomly selected lunch: ${randomLunchItem}`);
+  }
+}
+
+function showLunchMenu(lunchArray) {
+  if (lunchArray.length === 0) {
+    console.log("The menu is empty.");
+  } else {
+    // Join all elements with ", " to form the menu string
+    console.log(`Menu items: ${lunchArray.join(", ")}`);
+  }
+}
