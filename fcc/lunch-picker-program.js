@@ -51,3 +51,8 @@ function showLunchMenu(lunchArray) {
     console.log(`Menu items: ${lunchArray.join(", ")}`);
   }
 }
+
+addLunchToEnd(lunches, "Pizza");
+addLunchToEnd(lunches, "Burger");
+addLunchToStart(lunches, "Salad");
+console.log(lunches); // ["Salad", "Pizza", "Burger"]
