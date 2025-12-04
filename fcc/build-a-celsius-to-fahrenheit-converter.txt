@@ -1,9 +1,0 @@
-** start of script.js **
-
-function convertCtoF(tempC) {
-  let tempF = tempC * (9/5) + 32;
-  return tempF
-}
-
-** end of script.js **
-
