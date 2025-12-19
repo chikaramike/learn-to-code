@@ -1,26 +1,26 @@
 def rps(p1, p2):
     if p1 == p2:
-        print("draw")
+        return "draw"
     elif p1 == "rock":
         if p2 == "scissors":
-            print("P1 Won")
+            return "P1 Won"
         elif p2 == "paper":
-            print("P2 Won")
+            return "P2 Won"
     elif p1 == "paper":
         if p2 == "scissors":
-            print("P2 Won")
+            return "P2 Won"
         elif p2 == "rock":
-            print("P1 Won")
+            return "P1 Won"
     elif p1 == "scissors":
         if p2 == "rock":
-            print("P2 Won")
+            return "P2 Won"
         elif p2 == "paper":
-            print("P1 Won")
+            return "P1 Won"
 
 
 
-rps("rock", "scissors")
-rps("rock", "paper")
-rps("rock", "rock")
-rps("paper", "rock")
-rps("scissors", "rock")
+print(rps("rock", "scissors"))
+print(rps("rock", "paper"))
+print(rps("rock", "rock"))
+print(rps("paper", "rock"))
+print(rps("scissors", "rock"))
