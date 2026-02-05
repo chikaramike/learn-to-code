@@ -45,7 +45,7 @@ def create_character(n):
 
     return ren\nSTR ●●●●○○○○○○\nINT ●●○○○○○○○○\nCHA ●○○○○○○○○○.
 
-
+# Tests
 create_character("test")
 print(create_character(5))
 print(create_character(""))
