@@ -1,14 +1,24 @@
 # 1. You should have a function named apply_discount.
 # 2. Your apply_discount function should take two parameters: price and discount.
-
 def apply_discount(price, discount):
-    if isinstance(price, (int, float)) and isinstance(discount, (int, float)):
-        print(price - (price * discount / 100))
-    elif not isinstance(discount, int) or not isinstance(discount, float):
-        print("Discount needs to be a number")
-    elif not isinstance(price, int) or not isinstance(price, float):
-        print("Price needs to be a number")
+    if not isinstance(price, (int, float)):
+        return "The price should be a number"
 
+    if not isinstance(discount, (int, float)):
+        return "The discount should be a number"
+
+    if price <= 0:
+        return "The price should be greater than 0"
+
+    if discount < 0 or discount > 100:
+        return "The discount should be between 0 and 100"
+
+    result = price - (price * discount / 100)
+
+    if result.is_integer():
+        return int(result)
+
+    return result
 
 # 3. When apply_discount is called with a price (first argument) that is not a number (int or float) it should return The price should be a number.
 # 4. When apply_discount is called with a discount (second argument) that is not a number (int or float) it should return The discount should be a number.
@@ -23,3 +33,6 @@ def apply_discount(price, discount):
 apply_discount(100, 100)
 apply_discount(50, "time")
 apply_discount("time", 50)
+apply_discount(100, 20)
+apply_discount(200, 50)
+apply_discount(74.2, 20.0)
