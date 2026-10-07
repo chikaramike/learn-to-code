@@ -1,0 +1,25 @@
+[project]
+name = "learn-to-code"
+version = "0.0.0"
+description = "Mike's Python learning practice: FCC, Exercism, CodeWars, Coddy, PY4E."
+requires-python = ">=3.13"
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "ruff>=0.6",
+]
+
+[tool.pytest.ini_options]
+# Scope collection to the work; keep _template out of the run.
+testpaths = ["exercises", "courses"]
+norecursedirs = ["_template", ".venv", ".git"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.ruff.lint]
+# Bug-focused: pyflakes + syntax errors + import sorting. Learning code does not
+# need opinionated style rules (no ClassVar/tz nagging on practice solutions).
+select = ["E4", "E7", "E9", "F", "I"]

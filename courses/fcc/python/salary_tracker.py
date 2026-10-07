@@ -43,7 +43,7 @@ class Employee:
         if new_level == self.level:
             raise ValueError(f"'{self.level}' is already the selected level.")
         if Employee._base_salaries[new_level] < Employee._base_salaries[self.level]:
-            raise ValueError(f"Cannot change to lower level.")
+            raise ValueError("Cannot change to lower level.")
         print(f"'{self.name}' promoted to '{new_level}'.")
         self.salary = Employee._base_salaries[new_level]
         self._level = new_level
