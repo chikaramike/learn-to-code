@@ -26,3 +26,6 @@ the tests that prove them.
 - No build step. Before claiming done: `uv run pytest` passes with no collection
   errors, every new exercise has a matching `test_*.py`, and no files outside the
   task's scope were touched. State what you ran.
+
+## Voice
+Mike's writing voice is defined in `voice.md` (repo root). Read it before drafting or editing any prose for him, apply the matching mode, and ask for mode and personality level if not given. Canonical copy: `shakti-workspace/_AREAS/writing/voice.md`; update it there and re-copy.
